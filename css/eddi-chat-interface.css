@@ -1,0 +1,518 @@
+.typing_loader {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    -webkit-animation: typing 1s linear infinite alternate;
+    -moz-animation: typing 1s linear infinite alternate;
+    -ms-animation: typing 1s linear infinite alternate;
+    animation: typing 1s linear infinite alternate;
+    position: relative;
+    left: -12px;
+    margin: 7px 15px 6px;
+}
+
+.to .typing_loader {
+    animation: typing-black 1s linear infinite alternate;
+}
+
+@-webkit-keyframes typing {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(22, 50, 92, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 1), 24px 0px 0px 0px rgba(22, 50, 92, 0.4);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(22, 50, 92, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 1);
+    }
+}
+
+@-moz-keyframes typing {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(22, 50, 92, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 1), 24px 0px 0px 0px rgba(22, 50, 92, 0.4);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(22, 50, 92, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes typing-black {
+    0% {
+        background-color: rgba(74, 74, 74, 1);
+        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 0.4), 24px 0px 0px 0px rgba(74, 74, 74, 0.2);
+    }
+
+    50% {
+        background-color: rgba(74, 74, 74, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 1), 24px 0px 0px 0px rgba(74, 74, 74, 0.4);
+    }
+
+    100% {
+        background-color: rgba(74, 74, 74, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 0.4), 24px 0px 0px 0px rgba(74, 74, 74, 1);
+    }
+}
+
+@keyframes typing {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(22, 50, 92, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 1), 24px 0px 0px 0px rgba(22, 50, 92, 0.4);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(22, 50, 92, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 1);
+    }
+}
+
+form.convFormDynamic {
+    width: calc(100% - 33px);
+    margin: 10px auto 15px 0;
+    padding: 0 !important;
+    position: relative;
+}
+
+form.convFormDynamic textarea.userInputDynamic {
+    border-radius: 20px;
+    padding: 12px 22px;
+    color: #333;
+    padding: 12px 18px 12px 26px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    float: right;
+    clear: both;
+    max-width: 65%;
+    word-wrap: break-word;
+    background: #ffffff;
+    float: left;
+    border-top-left-radius: 0;
+    font-family: worksans-extralight, "work sans", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    width: 61.5%;
+    height: 64px;
+    max-height: 170px;
+    padding-right: 30px;
+    padding-left: 30px;
+    float: left;
+    border-style: none;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    font-family: 'Sf ui display', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: .25px;
+}
+
+form.convFormDynamic input.userInputDynamic {
+    border-radius: 20px;
+    padding: 12px 22px;
+    color: #333;
+    padding: 12px 18px 12px 26px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    float: right;
+    clear: both;
+    max-width: 65%;
+    word-wrap: break-word;
+    background: #ffffff;
+    float: left;
+    border-top-left-radius: 0;
+    font-family: worksans-extralight, "work sans", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    width: 61.5%;
+    height: 64px;
+    max-height: 170px;
+    padding-right: 30px;
+    padding-left: 30px;
+    float: left;
+    border-style: none;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    font-family: 'Sf ui display', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: .25px;
+}
+
+div.conv-form-wrapper div#messages {
+    max-height: 71vh;
+    height: auto !important;
+    overflow-y: scroll;
+}
+
+div.conv-form-wrapper div#messages:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+div.conv-form-wrapper {
+    position: relative;
+}
+
+div.container--chat,
+div.container--chat #eddi-chat-sample,
+#eddi-chat-sample {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+div.conv-form-wrapper div.wrapper-messages {
+    position: relative;
+    height: 270px;
+    max-height: 71vh;
+    overflow-y: scroll;
+}
+
+div.conv-form-wrapper:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 30px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(#04bcf9, transparent);
+}
+
+@media (max-width: 767px) {
+
+    div.conv-form-wrapper div.wrapper-messages,
+    div.conv-form-wrapper div#messages {
+        max-height: 71vh;
+    }
+}
+
+div.conv-form-wrapper div.wrapper-messages::-webkit-scrollbar,
+div#feed ul::-webkit-scrollbar,
+div.conv-form-wrapper div.options::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+}
+
+input[type="text"].userInputDynamic.error {
+    color: #ac0000 !important;
+}
+
+input[type="text"].userInputDynamic {
+    border-radius: 3px;
+    margin: 7px 10px;
+    color: #333333;
+}
+
+textarea.userInputDynamic.error {
+    color: #ac0000 !important;
+}
+
+textarea.userInputDynamic {
+    border-radius: 3px;
+    margin: 7px 10px;
+    color: #333333;
+}
+
+div.conv-form-wrapper div#messages {
+    transition: bottom 0.15s, padding-bottom 0.15s;
+    position: absolute;
+    bottom: 0;
+    height: auto !important;
+    width: 100%;
+    padding-bottom: 20px;
+    /*max-height: 71vh;
+   */
+
+}
+
+div.conv-form-wrapper div.options {
+    word-wrap: normal;
+    white-space: nowrap;
+    overflow-x: scroll;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    transform: translateY(-5px);
+}
+
+div.conv-form-wrapper div.options:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+div.conv-form-wrapper div.options div.option {
+    padding: 7px 12px;
+    border: 1px solid #16325c;
+    display: inline-block;
+    margin: 5px;
+    background: #ffffff;
+    color: #16325C;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: worksans-extralight, "work sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+div.conv-form-wrapper div.message {
+    animation: slideTop 0.15s ease;
+}
+
+div.conv-form-wrapper div.message:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+div.conv-form-wrapper div.message.ready {
+    animation: bounceIn 0.2s ease;
+    transform-origin: 0 0 0;
+}
+
+div.conv-form-wrapper div#messages div.message {
+    border-radius: 20px;
+    padding: 12px 22px;
+    font-size: 0.905rem;
+    color: #333;
+    padding: 12px 18px 12px 26px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    float: right;
+    clear: both;
+    max-width: 65%;
+    word-wrap: break-word;
+}
+
+div.conv-form-wrapper div#messages div.message.to {
+    background: #ffffff;
+    color: #000000;
+    float: left;
+    border-top-left-radius: 0;
+    font-family: worksans-extralight, "work sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+div.conv-form-wrapper div#messages div.message.from {
+    background: #16325c;
+    color: #fff;
+    border-top-right-radius: 0;
+    font-family: worksans-extralight, "work sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.message.to+.message.from,
+.message.from+.message.to {
+    margin-top: 15px;
+}
+
+@keyframes slideTop {
+    0% {
+        margin-bottom: -25px;
+    }
+
+    100% {
+        margin-bottom: 0;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.75, 0.75);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0);
+    }
+}
+
+div.conv-form-wrapper div.options div.option:hover {
+    background: #eeeeee;
+}
+
+div.conv-form-wrapper div.options div.option.selected {
+    background: #16325c;
+    color: #fff;
+}
+
+div.conv-form-wrapper div.options div.option.selected:hover {
+    background: #16325C;
+}
+
+form.convFormDynamic button.submit {
+    float: left;
+    margin: 7px 10px 5px;
+    padding: 12px 30px;
+    color: #ffffff;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background: #16325c;
+    outline: none !important;
+    font-family: worksans-extralight, "work sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    min-height: 48px;
+    min-width: 200px;
+    border-radius: 100px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    letter-spacing: .25px;
+    border: solid rgba(24, 57, 129, 1) 0px;
+}
+
+form.convFormDynamic button.submit:hover {
+    background: rgba(151, 192, 232, 1);
+    color: #ffffff;
+    font-weight: 700;
+    border: solid rgba(24, 57, 129, 1) 0px;
+}
+
+button.submit.glow {
+    box-shadow: 0 0 10px 5px rgba(22, 50, 92, 0.4);
+}
+
+.no-border {
+    border: none !important;
+}
+
+.dragscroll {
+    cursor: grab;
+}
+
+div.conv-form-wrapper div#messages::-webkit-scrollbar,
+div#feed ul::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+}
+
+span.clear {
+    display: block;
+    clear: both;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+img.gif {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 20px;
+}
+
+section#EDDI--chat--interface {
+    clear: both;
+    padding: 0px;
+    margin: 0px -10px;
+    max-height: 600px;
+    background-color: #04bcf9;
+    background-image: url('');
+    /* Change URL to desired background image URL */
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.container--chat {
+    padding: 7px 30px;
+    margin: 0 70px;
+}
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+    /* For IE 6/7 (trigger hasLayout) */
+}
+
+.col {
+    display: block;
+    float: left;
+    margin: 0;
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .col {
+        margin: 0;
+    }
+}
+
+.span_eddi {
+    width: 98.39%;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .span_eddi {
+        width: 100%;
+    }
+
+    .container--chat {
+        padding: 7px 10px;
+        margin: 0 20px;
+    }
+}
+
+.justify-content-center {
+    justify-content: center;
+}

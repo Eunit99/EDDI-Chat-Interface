@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie10 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie10 lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)&!(IEMobile)]><html class="no-js lt-ie10" lang="en"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-gb" translate="yes" dir="ltr" class="no-js">
+<!--<![endif]-->
+
+
+<head>
+	<title>EDDI Chat Interface </title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="title" content="EDDI Chat Interface">
+	<meta http-equiv="cleartype" content="on">
+	<meta name="author" content="@Eunit">
+	<link rel="shortcut icon" sizes="16x16" href="img/logo.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/eddi-chat-interface.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+</head>
+
+<body>
+
+	<section id="EDDI--chat--interface">
+		<div class="container--chat">
+			<div class="section group">
+				<div class="col span_eddi align-items-center justify-content-center">
+					<div id="eddi-chat-sample" class="conv-form-wrapper">
+						<!-- welcome -->
+						<form id="eddiForm" action="#" target="_blank" method="POST" class="hidden">
+							<input type="text" data-conv-question="Welcome Newcomer" name="welcome"
+								data-no-answer="true" data-callback="storeState">
+							<input type="text" data-conv-question="Hello and Servus from Austria ✋" name="hello"
+								data-no-answer="true" data-callback="storeState">
+							<select data-conv-question="Wait, don't we already know each other?" name="know-each-other"
+								data-callback="storeState">
+								<option value="old-user">Yes</option>
+								<option value="new-user">No</option>
+							</select>
+							<!-- /welcome -->
+							<div data-conv-fork="know-each-other">
+								<!-- don't know each other -->
+								<div data-conv-case="new-user">
+									<input type="text" name="new-user-know-each-other" data-callback="storeState"
+										data-conv-question="My name is EDDI. I'm here to help create automated conversation and workflows to achieve greater success."
+										data-no-answer="true">
+									<input type="text" name="new-user-know-each-other-gif" data-callback="storeState"
+										data-conv-question="<img alt='tenor gif' class='gif' src='img/tenor.gif'>"
+										data-no-answer="true">
+									<input type="text" name="new-user-benefits" data-callback="storeState"
+										data-conv-question="In general, I am not so hairy - but this is one of
+												the benefits to be a bot - I can be created as individual as you like" data-no-answer="true">
+									<input type="text" name="new-user-name" data-callback="storeState" required
+										placeholder="Type your full name"
+										data-conv-question=" Anyway, enough of me - what's your name?">
+									<input type="text" name="new-user-welcome-name" data-callback="storeState"
+										data-conv-question="Great to meet you {new-user-name}:0" data-no-answer="true">
+									<input type="text" name="new-user-do-for-you" data-callback="storeState"
+										data-conv-question="What can I do for you {new-user-name}:0?"
+										data-no-answer="true">
+									<select data-callback="storeState" name="new-user-help"
+										data-conv-question="Select the topic that best describe what you want">
+										<option value="need-help">I need help</option>
+										<option value="more-info">Contact us for more information</option>
+										<option value="demo" data-callback="demo">Get a Demo</option>
+										<option value="question">I have a question</option>
+									</select>
+									<div data-conv-fork="new-user-help">
+										<div data-conv-case="need-help">
+											<input type="text" name="need-help-sending-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Please sit tight while I pass on your request to my partners. They will happily get back to you within the next 24 hours.">
+											<input type="text" name="need-help-input-email-address"
+												data-callback="storeState"
+												data-conv-question="Oh wait, {new-user-name}:0. What's your email address?"
+												data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+												type="email" name="email" placeholder="Type your email...">
+											<input type="text" name="need-help-forwarding-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Thank you {new-user-name}:0. Now I have everything I need to forward your request.">
+											<input type="text" name="need-help-nice-chatting-with-you"
+												data-no-answer="true" data-callback="storeState"
+												data-conv-question="It was nice nice chatting with you. Just text me if you need something else!">
+											<input data-no-answer="true" type="text" name="need-help-gif"
+												data-callback="storeState"
+												data-conv-question="<img alt='dog-bye gif' class='gif' src='img/dog-bye.gif'>">
+											<select name="need-help-thanks-for-time" data-callback="storeState"
+												data-conv-question="Thanks {new-user-name}:0 for your time." id="eunit">
+												<option id="eunit" value="great">Great! 😄</option>
+											</select>
+										</div>
+										<div data-conv-case="more-info">
+											<input type="text" name="more-info-sending-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Please sit tight while I pass on your request to my partners. They will happily get back to you within the next 24 hours.">
+											<input type="text" name="more-info-input-email-address"
+												data-callback="storeState"
+												data-conv-question="Oh wait, {new-user-name}:0. What's your email address?"
+												data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+												type="email" name="email" placeholder="Type your email...">
+											<input type="text" name="more-info-forwarding-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Thank you {new-user-name}:0. Now I have everything I need to forward your request.">
+											<input type="text" name="more-info-nice-chatting-with-you"
+												data-no-answer="true" data-callback="storeState"
+												data-conv-question="It was nice nice chatting with you. Just text me if you need something else!">
+											<input data-no-answer="true" type="text" name="more-info-gif"
+												data-callback="storeState"
+												data-conv-question="<img alt='dog-bye gif' class='gif' src='img/dog-bye.gif'>">
+											<select name="more-info-thanks-for-time" data-callback="storeState"
+												data-conv-question="Thanks {new-user-name}:0 for your time."
+												id="eunit1">
+												<option id="eunit1" value="great">Great! 😄</option>
+											</select>
+										</div>
+										<div data-conv-case="demo">
+											<input type="text" name="demo-info-nice-chatting-with-you"
+												data-no-answer="true" data-callback="storeState"
+												data-conv-question="It was nice nice chatting with you. Just text me if you need something else!">
+											<input data-no-answer="true" type="text" name="demo-info-gif"
+												data-callback="storeState"
+												data-conv-question="<img alt='dog-bye gif' class='gif' src='img/dog-bye.gif'>">
+											<select name="demo-info-thanks-for-time" data-callback="storeState"
+												data-conv-question="Thanks {new-user-name}:0 for your time."
+												id="eunit2">
+												<option id="eunit2" value="great">Great! 😄</option>
+											</select>
+										</div>
+										<div data-conv-case="question">
+											<input type="text" name="type-question" data-callback="storeState"
+												data-conv-question="Type your question...">
+											<input type="text" name="good-question" data-callback="storeState"
+												data-conv-question="That's a good question {new-user-name}:0 "
+												data-no-answer="true">
+											<input type="text" name="question-sending-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Please sit tight while I pass on your request to my partners. They will happily get back to you within the next 24 hours.">
+											<input type="text" name="question-input-email-address"
+												data-callback="storeState"
+												data-conv-question="Oh wait, {new-user-name}:0. What's your email address?"
+												data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+												type="email" name="email" placeholder="Type your email...">
+											<input type="text" name="question-forwarding-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Thank you {new-user-name}:0. Now I have everything I need to forward your request.">
+											<input type="text" name="question-info-nice-chatting-with-you"
+												data-no-answer="true" data-callback="storeState"
+												data-conv-question="It was nice nice chatting with you. Just text me if you need something else!">
+											<input data-no-answer="true" type="text" name="question-info-gif"
+												data-callback="storeState"
+												data-conv-question="<img alt='dog-bye gif' class='gif' src='img/dog-bye.gif'>">
+											<select name="question-info-thanks-for-time" data-callback="storeState"
+												data-conv-question="Thanks {new-user-name}:0 for your time."
+												id="eunit3">
+												<option id="eunit3" value="great">Great! 😄</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<!-- /don't know each other -->
+
+								<!-- know each other -->
+								<div data-conv-case="old-user">
+									<input type="text" name="old-user-know-each-other" data-callback="storeState"
+										data-conv-question="Welcome back 😊 May I introduce myself again."
+										data-no-answer="true">
+									<input type="text" name="old-user-introduce-again" data-callback="storeState"
+										data-conv-question="My name is EDDI. I'm here to help create automated conversation and workflows to achieve greater success."
+										data-no-answer="true">
+									<input type="text" name="old-user-know-each-other-gif" data-callback="storeState"
+										data-conv-question="<img alt='tenor gif' class='gif' src='img/tenor.gif'>"
+										data-no-answer="true">
+									<input type="text" name="old-user-name" data-callback="storeState" required
+										placeholder="Type your full name" data-conv-question="What's your name again?">
+									<input type="text" name="old-user-welcome-name" data-callback="storeState"
+										data-conv-question="Thanks. Nice to see you again {old-user-name}:0!"
+										data-no-answer="true">
+									<input type="text" name="old-user-do-for-you" data-callback="storeState"
+										data-conv-question="What can I do for you {old-user-name}:0?"
+										data-no-answer="true">
+									<select data-callback="storeState" name="old-user-help"
+										data-conv-question="Select the topic that best describe what you want">
+										<option value="old-user-need-help">I need help</option>
+										<option value="old-user-more-info">Contact us for more information
+										</option>
+										<option value="old-user-demo" data-callback="demo">Get a Demo</option>
+										<option value="old-user-question">I have a question</option>
+									</select>
+									<div data-conv-fork="old-user-help">
+										<div data-conv-case="old-user-need-help">
+											<input type="text" name="need-help-sending-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Please sit tight while I pass on your request to my partners. They will happily get back to you within the next 24 hours.">
+											<input type="text" name="need-help-input-email-address"
+												data-callback="storeState"
+												data-conv-question="Oh wait, {old-user-name}:0. What's your email address?"
+												data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+												type="email" name="email" placeholder="Type your email...">
+											<input type="text" name="need-help-forwarding-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Thank you {old-user-name}:0. Now I have everything I need to forward your request.">
+											<input type="text" name="need-help-saying-bye" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="It was nice nice chatting with you. Just text me if you need something else!">
+											<input data-no-answer="true" type="text" name="need-help-gif"
+												data-callback="storeState"
+												data-conv-question="<img alt='dog-bye gif' class='gif' src='img/dog-bye.gif'>">
+											<select name="need-help-thanks-for-time" data-callback="storeState"
+												data-conv-question="Thanks {old-user-name}:0 for your time." id="eunit">
+												<option id="eunit" value="great">Great! 😄</option>
+											</select>
+										</div>
+										<div data-conv-case="old-user-more-info">
+											<input type="text" name="more-info-sending-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Please sit tight while I pass on your request to my partners. They will happily get back to you within the next 24 hours.">
+											<input type="text" name="more-info-input-email-address"
+												data-callback="storeState"
+												data-conv-question="Oh wait, {old-user-name}:0. What's your email address?"
+												data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+												type="email" name="email" placeholder="Type your email...">
+											<input type="text" name="more-info-forwarding-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Thank you {old-user-name}:0. Now I have everything I need to forward your request.">
+											<input type="text" name="more-info-nice-chatting-with-you"
+												data-no-answer="true" data-callback="storeState"
+												data-conv-question="It was nice nice chatting with you. Just text me if you need something else!">
+											<input data-no-answer="true" type="text" name="more-info-gif"
+												data-callback="storeState"
+												data-conv-question="<img alt='dog-bye gif' class='gif' src='img/dog-bye.gif'>">
+											<select name="more-info-thanks-for-time" data-callback="storeState"
+												data-conv-question="Thanks {old-user-name}:0 for your time."
+												id="eunit1">
+												<option id="eunit1" value="great">Great! 😄</option>
+											</select>
+										</div>
+										<div data-conv-case="old-user-demo">
+											<input type="text" name="demo-nice-chatting-with-you" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="It was nice nice chatting with you. Just text me if you need something else!">
+											<input type="text" data-no-answer="true" name="demo-gif"
+												data-callback="storeState"
+												data-conv-question="<img alt='dog-bye gif' class='gif' src='img/dog-bye.gif'>">
+											<select name="demo-thanks-for-time" data-callback="storeState"
+												data-conv-question="Thanks {old-user-name}:0 for your time."
+												id="eunit2">
+												<option id="eunit2" value="great">Great! 😄</option>
+											</select>
+										</div>
+										<div data-conv-case="old-user-question">
+											<input type="text" name="type-question" data-callback="storeState"
+												data-conv-question="Type your question...">
+											<input type="text" name="good-question" data-callback="storeState"
+												data-conv-question="That's a good question {old-user-name}:0 "
+												data-no-answer="true">
+											<input type="text" name="question-sending-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Please sit tight while I pass on your request to my partners. They will happily get back to you within the next 24 hours.">
+											<input type="text" name="question-input-email-address"
+												data-callback="storeState"
+												data-conv-question="Oh wait, {old-user-name}:0. What's your email address?"
+												data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+												type="email" name="email" placeholder="Type your email...">
+											<input type="text" name="question-forwarding-request" data-no-answer="true"
+												data-callback="storeState"
+												data-conv-question="Thank you {old-user-name}:0. Now I have everything I need to forward your request.">
+											<input type="text" name="question-nice-chatting-with-you"
+												data-no-answer="true" data-callback="storeState"
+												data-conv-question="It was nice nice chatting with you. Just text me if you need something else!">
+											<input data-no-answer="true" type="text" name="question-gif"
+												data-callback="storeState"
+												data-conv-question="<img alt='dog-bye gif' class='gif' src='img/dog-bye.gif'>">
+											<select name="question-thanks-for-time" data-callback="storeState"
+												data-conv-question="Thanks {old-user-name}:0 for your time."
+												id="eunit3">
+												<option id="eunit3" value="great">Great! 😄</option>
+											</select>
+										</div>
+									</div>
+								</div> <!-- /know each other -->
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/autosize.min.js"></script>
+	<script type="text/javascript" src="js/eddi-chat-interface.js"></script>
+	<script type="text/javascript" src="js/manipulations.js"></script>
+
+</body>
+
+</html>
